@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4e1;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+#change-bg-btn {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#change-bg-btn:hover {
+    background-color: #ff8da1;
+}
+
+#notes-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Individual Note Styling */
+.note {
+    background-color: #ffe4f2;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.note h2 {
+    font-size: 1rem;
+    color: #ff69b4;
+}
+
+.note p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 22px;
+}
+
+.delete-btn:hover {
+    background-color: #ff4c4c;
+}
+
+/* Add Note Button Styling */
+#add-note-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 15px;
+    background-color: #ffb6c1;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#add-note-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff69b4;
+}
+
+/* Scrollbar Customization */
+#notes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#notes-container::-webkit-scrollbar-thumb {
+    background-color: #ffb6c1;
+    border-radius: 8px;
+}
+
+#notes-container::-webkit-scrollbar-track {
+    background-color: #ffe4e1;
+}
